@@ -60,9 +60,11 @@ Este proyecto es un juego simple de batalla de robots por turnos desarrollado en
 
 ## 💻 Iniciar el juego
 
-- Clona el repositorio 
+- Clona el repositorio:
+  ``` bash
+  git clone https://github.com/JuanD-coder/Robot-Project.git
+  ```
 - Ejecuta el juego desde terminal:
-
-``` bash
-python3 robot_battle.py
-```
+  ``` bash
+  python3 robot_battle.py
+  ```
