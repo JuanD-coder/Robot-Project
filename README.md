@@ -10,8 +10,6 @@ Este proyecto es un juego simple de batalla de robots por turnos desarrollado en
 - Desarrollar una lógica de combate basada en **atributos dinámicos**.
 - Representar gráficamente el estado del robot con **arte ASCII**.
 
----
-
 ## 🦾 Robot structure
 
 
