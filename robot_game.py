@@ -74,7 +74,7 @@ class Part:
       }
 
   def is_available(self):
-      return not self.defense_level <= 0
+      return self.defense_level >= 0
 
 colors = {
     "Black": '\x1b[90m',
@@ -167,9 +167,18 @@ def play_game():
 
       current_robot.print_status()
       print("What part should I use to attack? ")
-      part_to_use = int(input("- Choose a number part: "))
+      try:
+        part_to_use = int(input("- Choose a number part: "))
+      except ValueError:
+        print("Invalid input, please enter a number")
+        continue
+
 
       if part_to_use <= 5:
+         if not current_robot.parts[part_to_use].is_available():
+            print(f"{colors['color_defense_red']}This part is not available! Please select another one.\n{colors['White']}")
+            continue
+          
          enemy_robot.print_status()
          print("Which part of the enemy should we attack? ")
          part_to_attack = int(input("- Choose a enemy part to attack: "))
